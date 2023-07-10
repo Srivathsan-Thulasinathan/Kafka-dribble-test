@@ -1,0 +1,482 @@
+# Created at 2023-07-10T12:34:20.449
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2023-07-10T12:34:21.060
+Unexpected IOException with stream: 2023-07-10 12:34:21.057  INFO 3314 --- [| adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+
+
+
+# Created at 2023-07-10T12:34:21.070
+Unexpected IOException with stream: 2023-07-10 12:34:21.064 ERROR 3314 --- [           main] o.springframework.kafka.core.KafkaAdmin  : Could not configure topics
+
+org.springframework.kafka.KafkaException: Timed out waiting to get existing topics; nested exception is java.util.concurrent.TimeoutException
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$5(KafkaAdmin.java:275) ~[spring-kafka-2.8.5.jar:2.8.5]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:254) ~[spring-kafka-2.8.5.jar:2.8.5]
+	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:240) ~[spring-kafka-2.8.5.jar:2.8.5]
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:178) ~[spring-kafka-2.8.5.jar:2.8.5]
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:145) ~[spring-kafka-2.8.5.jar:2.8.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:972) ~[spring-beans-5.3.19.jar:5.3.19]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-2.6.7.jar:2.6.7]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.19.jar:5.3.19]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095) ~[na:na]
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180) ~[kafka-clients-3.0.1.jar:na]
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$5(KafkaAdmin.java:257) ~[spring-kafka-2.8.5.jar:2.8.5]
+	... 81 common frames omitted
+
+
+
+# Created at 2023-07-10T12:34:21.686
+Unexpected IOException with stream: 2023-07-10 12:34:21.679  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:22.604
+Unexpected IOException with stream: 2023-07-10 12:34:22.598  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:23.629
+Unexpected IOException with stream: 2023-07-10 12:34:23.618  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:24.657
+Unexpected IOException with stream: 2023-07-10 12:34:24.644  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:25.585
+Unexpected IOException with stream: 2023-07-10 12:34:25.571  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:26.513
+Unexpected IOException with stream: 2023-07-10 12:34:26.506  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:27.435
+Unexpected IOException with stream: 2023-07-10 12:34:27.425  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:28.459
+Unexpected IOException with stream: 2023-07-10 12:34:28.447  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:29.383
+Unexpected IOException with stream: 2023-07-10 12:34:29.371  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:30.507
+Unexpected IOException with stream: 2023-07-10 12:34:30.497  WARN 3314 --- [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:31.083
+Unexpected IOException with stream: 2023-07-10 12:34:31.072  INFO 3314 --- [| adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
+
+
+# Created at 2023-07-10T12:34:31.095
+Unexpected IOException with stream: 2023-07-10 12:34:31.086  INFO 3314 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+
+
+# Created at 2023-07-10T12:34:31.106
+Unexpected IOException with stream: 2023-07-10 12:34:31.098  INFO 3314 --- [| adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+
+
+
+# Created at 2023-07-10T12:34:31.112
+Unexpected IOException with stream: 2023-07-10 12:34:31.106  INFO 3314 --- [| adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 2 remaining operation(s) during close.
+
+
+# Created at 2023-07-10T12:34:31.118
+Unexpected IOException with stream: 2023-07-10 12:34:31.108  INFO 3314 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-myGroup-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = myGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+
+
+# Created at 2023-07-10T12:34:31.124
+Unexpected IOException with stream: 2023-07-10 12:34:31.116  INFO 3314 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+
+
+# Created at 2023-07-10T12:34:31.130
+Unexpected IOException with stream: 2023-07-10 12:34:31.124  INFO 3314 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+
+
+# Created at 2023-07-10T12:34:31.135
+Unexpected IOException with stream: 2023-07-10 12:34:31.130  INFO 3314 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+
+
+# Created at 2023-07-10T12:34:31.158
+Unexpected IOException with stream: 2023-07-10 12:34:31.152  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.1
+
+
+# Created at 2023-07-10T12:34:31.164
+Unexpected IOException with stream: 2023-07-10 12:34:31.159  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8e30984f43e64d8b
+
+
+# Created at 2023-07-10T12:34:31.169
+Unexpected IOException with stream: 2023-07-10 12:34:31.164  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1688972671152
+
+
+# Created at 2023-07-10T12:34:31.175
+Unexpected IOException with stream: 2023-07-10 12:34:31.170  INFO 3314 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Subscribed to topic(s): javaguides_json
+
+
+# Created at 2023-07-10T12:34:31.198
+Unexpected IOException with stream: 2023-07-10 12:34:31.192  INFO 3314 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-myGroup-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = myGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+
+
+# Created at 2023-07-10T12:34:31.215
+Unexpected IOException with stream: 2023-07-10 12:34:31.209  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.1
+
+
+# Created at 2023-07-10T12:34:31.222
+Unexpected IOException with stream: 2023-07-10 12:34:31.216  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8e30984f43e64d8b
+
+
+# Created at 2023-07-10T12:34:31.227
+Unexpected IOException with stream: 2023-07-10 12:34:31.222  INFO 3314 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1688972671209
+
+
+# Created at 2023-07-10T12:34:31.236
+Unexpected IOException with stream: 2023-07-10 12:34:31.231  INFO 3314 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Subscribed to topic(s): javaguides
+
+
+# Created at 2023-07-10T12:34:31.274
+Unexpected IOException with stream: 2023-07-10 12:34:31.266  INFO 3314 --- [           main] .SpringbootKafkaTutorialApplicationTests : Started SpringbootKafkaTutorialApplicationTests in 43.056 seconds (JVM running for 44.228)
+
+
+# Created at 2023-07-10T12:34:31.385
+Unexpected IOException with stream: 2023-07-10 12:34:31.371  WARN 3314 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:31.393
+Unexpected IOException with stream: 2023-07-10 12:34:31.374  WARN 3314 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+
+# Created at 2023-07-10T12:34:31.400
+Unexpected IOException with stream: 2023-07-10 12:34:31.387  WARN 3314 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+
+
+# Created at 2023-07-10T12:34:31.406
+Unexpected IOException with stream: 2023-07-10 12:34:31.394  WARN 3314 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+
+
+# Created at 2023-07-10T12:34:31.412
+Unexpected IOException: 5,1,net.javaguides.springboot.SpringbootKafkaTutorialApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2023-07-10T12:34:31.420
+Unexpected IOException with stream: 2023-07-10 12:34:31.404  INFO 3314 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Resetting generation due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.428
+Unexpected IOException with stream: 2023-07-10 12:34:31.406  INFO 3314 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.435
+Unexpected IOException with stream: 2023-07-10 12:34:31.423  INFO 3314 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.440
+Unexpected IOException with stream: 2023-07-10 12:34:31.429  INFO 3314 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.446
+Unexpected IOException with stream: 2023-07-10 12:34:31.435  INFO 3314 --- [ntainer#1-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Unsubscribed all topics or patterns and assigned partitions
+
+
+# Created at 2023-07-10T12:34:31.450
+Unexpected IOException with stream: 2023-07-10 12:34:31.440  INFO 3314 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Unsubscribed all topics or patterns and assigned partitions
+
+
+# Created at 2023-07-10T12:34:31.456
+Unexpected IOException with stream: 2023-07-10 12:34:31.447  INFO 3314 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Resetting generation due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.460
+Unexpected IOException with stream: 2023-07-10 12:34:31.450  INFO 3314 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.466
+Unexpected IOException with stream: 2023-07-10 12:34:31.456  INFO 3314 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-2, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.472
+Unexpected IOException with stream: 2023-07-10 12:34:31.461  INFO 3314 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+
+
+# Created at 2023-07-10T12:34:31.477
+Unexpected IOException with stream: 2023-07-10 12:34:31.467  INFO 3314 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+
+
+# Created at 2023-07-10T12:34:31.483
+Unexpected IOException with stream: 2023-07-10 12:34:31.472  INFO 3314 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+
+
+# Created at 2023-07-10T12:34:31.487
+Unexpected IOException with stream: 2023-07-10 12:34:31.477  INFO 3314 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+
+
+# Created at 2023-07-10T12:34:31.491
+Unexpected IOException with stream: 2023-07-10 12:34:31.483  INFO 3314 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+
+
+# Created at 2023-07-10T12:34:31.497
+Unexpected IOException with stream: 2023-07-10 12:34:31.487  INFO 3314 --- [ntainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+
+
+# Created at 2023-07-10T12:34:31.502
+Unexpected IOException with stream: 2023-07-10 12:34:31.491  INFO 3314 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+
+
+# Created at 2023-07-10T12:34:31.508
+Unexpected IOException with stream: 2023-07-10 12:34:31.500  INFO 3314 --- [ntainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-myGroup-2 unregistered
+
+
+# Created at 2023-07-10T12:34:31.517
+Unexpected IOException with stream: 2023-07-10 12:34:31.512  INFO 3314 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: Consumer stopped
+
+
+# Created at 2023-07-10T12:34:31.531
+Unexpected IOException with stream: 2023-07-10 12:34:31.525  INFO 3314 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-myGroup-1 unregistered
+
+
+# Created at 2023-07-10T12:34:31.535
+Unexpected IOException with stream: 2023-07-10 12:34:31.531  INFO 3314 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: Consumer stopped
+
+
