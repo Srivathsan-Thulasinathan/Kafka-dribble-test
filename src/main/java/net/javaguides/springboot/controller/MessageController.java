@@ -17,7 +17,7 @@ public class MessageController {
         this.kafkaProducer = kafkaProducer;
     }
 
-    // http:localhost:8080/api/v1/kafka/publish?message=hello world
+    // http://3.71.5.173:8080/api/v1/kafka/heartbeat
     @GetMapping("/publish")
     public ResponseEntity<String> publish(@RequestParam("message") String message){
         kafkaProducer.sendMessage(message);
@@ -26,7 +26,7 @@ public class MessageController {
 
     @GetMapping("/heartbeat")
     public String heartbeat() {
-        kafkaProducer.sendMessage("sent Message");
+        kafkaProducer.sendMessage("Message received loud and clear");
         return "The Kafka Broker is up and ready to hit";
     }
 }
