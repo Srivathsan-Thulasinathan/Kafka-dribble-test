@@ -23,4 +23,10 @@ public class MessageController {
         kafkaProducer.sendMessage(message);
         return ResponseEntity.ok("Message sent to the topic");
     }
+
+    @GetMapping("/heartbeat")
+    public String heartbeat() {
+        kafkaProducer.sendMessage("sent Message");
+        return "The Kafka Broker is up and ready to hit";
+    }
 }
